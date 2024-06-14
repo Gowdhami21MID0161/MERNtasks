@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration</title>
+    <style>
+      body {
+        background-color: lightblue;
+      }
+      .reg {
+        background-color: cadetblue;
+        padding: 30px;
+        width: 700px;
+        margin: 50px auto;
+        flex-direction: column;
+        align-items: center;
+      }
+      .form-group {
+        display: flex;
+        margin-bottom: 10px;
+      }
+      label {
+        font-size: 100%;
+        font-family: sans-serif;
+        width: 100%;
+        margin-left: 100px;
+      }
+      input[type="text"],
+      input[type="email"],
+      input[type="password"],
+      input[type="number"],
+      textarea {
+        background-color: white;
+        padding: 7px;
+        width: 200%;
+        border: none;
+        font-family: sans-serif;
+        margin-right: 20%;
+      }
+      input[type="submit"] {
+        color: black;
+        background-color: white;
+        font-size: 20px;
+        font-weight: bold;
+        width: 70%;
+        padding: 15px;
+        border-radius: 5px;
+        border: none;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .radio {
+        display: flex;
+      }
+      select {
+        color: black;
+        background-color: gainsboro;
+        padding: 10px;
+        width: 100%;
+        margin-right: 40%;
+        border: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="reg">
+      <form>
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="your name"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="your email"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required />
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number:</label>
+          <input type="number" id="phone" name="phone" />
+        </div>
+        <div class="form-group">
+          <label for="gender">Gender:</label>
+          <div class="radio">
+            <label for="male">Male:</label>
+            <input type="radio" id="male" name="gender" value="male" />
+          </div>
+          <div class="radio">
+            <label for="female">Female:</label>
+            <input type="radio" id="female" name="gender" value="female" />
+          </div>
+          <div class="radio">
+            <label for="other">Other:</label>
+            <input type="radio" id="other" name="gender" value="other" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="language">Language:</label>
+          <select id="language" name="language">
+            <option>Select language</option>
+            <option value="english">English</option>
+            <option value="tamil">Tamil</option>
+            <option value="telugu">Telugu</option>
+            <option value="kannada">Kannada</option>
+            <option value="Hindi">Hindi</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="zip">Zip Code:</label>
+          <input type="text" id="zip" name="zip" />
+        </div>
+        <div class="form-group">
+          <label for="about">About:</label>
+          <textarea
+            id="about"
+            name="about"
+            placeholder="Write about yourself..."
+          ></textarea>
+        </div>
+        <div class="form-group">
+          <input type="submit" value="Register" />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
