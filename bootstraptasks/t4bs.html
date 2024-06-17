@@ -13,11 +13,11 @@
     <style>
       .card {
         border: none;
-        box-shadow: 0 4px 8px gray;
+        box-shadow: 0 4px 8px grey;
         transition: box-shadow 0.3s ease-in-out;
       }
       .card:hover {
-        box-shadow: 0 8px 16px black;
+        box-shadow: 0 20px 40px black;
       }
       .card-title {
         margin-bottom: 0.1rem;
@@ -25,16 +25,12 @@
         font-weight: bold;
       }
       .btn-link {
-        text-decoration: none;
         font-weight: bold;
+        text-decoration: none;
       }
       .card-content {
         margin-bottom: 1rem;
         color: grey;
-      }
-      .card-img-top {
-        height: 250px;
-        object-fit: cover;
       }
       .card .card-action {
         border-top: 1px solid grey;
@@ -47,6 +43,18 @@
       .card .card-action a:hover {
         color: orange;
       }
+      .card-img-top.hover-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: 0.2s ease-in-out;
+      }
+      .card:hover .card-img-top.hover-img {
+        opacity: 1;
+      }
     </style>
   </head>
   <body>
@@ -54,11 +62,14 @@
       <div class="row row-cols-1 row-cols-md-4 g-4">
         <div class="col">
           <div class="card h-100">
-            <img
-              src="../images/img3.webp"
-              class="card-img-top"
-              alt="Card Image"
-            />
+            <div class="position-relative">
+              <img src="../images/img7.jpg" class="card-img-top" alt="error" />
+              <img
+                src="../images/img3.webp"
+                class="card-img-top hover-img"
+                alt="error"
+              />
+            </div>
             <div class="card-body">
               <h6 class="card-title">Mount Everest</h6>
               <div class="card-content">
@@ -86,11 +97,14 @@
         </div>
         <div class="col">
           <div class="card h-100">
-            <img
-              src="../images/img6.jpg"
-              class="card-img-top"
-              alt="Card Image"
-            />
+            <div class="position-relative">
+              <img src="../images/img7.jpg" class="card-img-top" alt="error" />
+              <img
+                src="../images/img4.jpg"
+                class="card-img-top hover-img"
+                alt="error"
+              />
+            </div>
             <div class="card-body">
               <h5 class="card-title">Elephant</h5>
               <div class="card-content">
@@ -120,11 +134,14 @@
         </div>
         <div class="col">
           <div class="card h-100">
-            <img
-              src="../images/img5.jpg"
-              class="card-img-top"
-              alt="Card Image"
-            />
+            <div class="position-relative">
+              <img src="../images/img7.jpg" class="card-img-top" alt="error" />
+              <img
+                src="../images/img5.jpg"
+                class="card-img-top hover-img"
+                alt="error"
+              />
+            </div>
             <div class="card-body">
               <h5 class="card-title">Fruits</h5>
               <div class="card-content">
@@ -154,11 +171,14 @@
         </div>
         <div class="col">
           <div class="card h-100">
-            <img
-              src="../images/img4.jpg"
-              class="card-img-top"
-              alt="Card Image"
-            />
+            <div class="position-relative">
+              <img src="../images/img7.jpg" class="card-img-top" alt="error" />
+              <img
+                src="../images/img6.jpg"
+                class="card-img-top hover-img"
+                alt="error"
+              />
+            </div>
             <div class="card-body">
               <h5 class="card-title">Northern lights (aurora borealis)</h5>
               <div class="card-content">

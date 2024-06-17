@@ -27,6 +27,13 @@
         border-radius: 50%;
         margin-left: 35rem;
       }
+      #hobbies {
+        display: flex;
+        padding: 0.2rem;
+        width: 100%;
+        border-radius: 5px;
+        border: 1px solid gainsboro;
+      }
       .form-control:placeholder-shown + .error-message {
         display: block;
       }
@@ -77,8 +84,15 @@
               <div class="error-message">Password is required</div>
             </div>
             <div class="mb-3">
-              <label for="hobbies" class="">Hobbies</label>
-              <input type="number" class="form-control" id="hobbies" /><br />
+              <label for="hobbies p-6">Hobbies</label>
+              <select id="hobbies">
+                <option></option>
+                <option>Reading</option>
+                <option>Dancing</option>
+                <option>Drawing</option>
+                <option>swimming</option>
+                <option>Singing</option>
+              </select>
             </div>
             <button type="submit" class="btn btn-danger w-100">Submit</button>
           </form>

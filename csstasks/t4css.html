@@ -3,130 +3,50 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hoverable Sidenav Buttons</title>
+    <title>CSS Task 4</title>
     <style>
-      .nav {
-        padding-top: 20px;
-        position: fixed;
-        width: 100px;
+      .title {
+        width: 40%;
+        height: 20%;
+        text-align: center;
       }
-      .button {
-        color: black;
-        display: block;
-        width: 70%;
-        padding: 20px;
-        position: relative;
+      .btn {
+        padding: 1rem;
+        width: 5%;
+        height: 20px;
+        margin-bottom: 10px;
+        border-top-right-radius: 10%;
+        border-bottom-right-radius: 10%;
       }
-      .b1 {
-        color: green;
-        background-color: green;
-      }
-      .b2 {
-        color: blue;
-        background-color: blue;
-      }
-      .b3 {
-        color: red;
-        background-color: red;
-      }
-      .b4 {
-        color: black;
-        background-color: black;
-      }
-      .button .nav-button {
-        display: none;
-        border: 1px solid grey;
-        left: 50px;
-        width: 300px;
-        background-color: white;
-        padding: 20px;
-        position: relative;
-      }
-      .button:hover {
-        /*pseudo cls-provide styles for a particular */
-        padding: 3rem;
+      .btn:hover {
+        padding: 2rem;
+        width: 10%;
         transition: 1s ease-in-out;
       }
-      .button:hover .nav-button {
-        display: block;
+      #btn1 {
+        background-color: green;
       }
-      .nav-button table {
-        width: 100%;
-        border-collapse: collapse;
+      #btn2 {
+        background-color: blue;
       }
-
-      .nav-button th,
-      .nav-button td {
-        border: 1px solid grey;
-        padding: 10px;
-        text-align: left;
+      #btn3 {
+        background-color: red;
       }
-      #hover {
-        display: block;
-        text-align: center;
-        justify-content: space-between;
-        width: 50%;
+      #btn4 {
+        background-color: grey;
       }
     </style>
   </head>
   <body>
-    <div class="nav">
-      <a class="button b1"
-        >Name
-        <div class="nav-button">
-          <table>
-            <tr>
-              <th>Name</th>
-              <td>Aisha</td>
-              <td>Harish</td>
-              <td>Arivu</td>
-            </tr>
-          </table>
-        </div>
-      </a>
-      <a class="button b2"
-        >Age
-        <div class="nav-button">
-          <table>
-            <tr>
-              <th>Age</th>
-              <td>25</td>
-              <td>30</td>
-              <td>24</td>
-            </tr>
-          </table>
-        </div>
-      </a>
-      <a class="button b3"
-        >Occupation
-        <div class="nav-button">
-          <table>
-            <tr>
-              <th>Occupation</th>
-              <td>Doctor</td>
-              <td>Data Engineer</td>
-              <td>Data Analyst</td>
-            </tr>
-          </table>
-        </div>
-      </a>
-      <a class="button b4"
-        >Gender
-        <div class="nav-button">
-          <table>
-            <tr>
-              <th>Gender</th>
-              <td>Female</td>
-              <td>Male</td>
-              <td>Male</td>
-            </tr>
-          </table>
-        </div>
-      </a>
-    </div>
-    <div id="hover">
-      <h2>Hoverable Sidenav Buttons</h2>
+    <div class="title">
+      <h1>Hoverable Sidenav Buttons</h1>
       <p>Hover over the buttons in the left side navigation to open them.</p>
+      <div class="nav">
+        <div id="btn1" class="btn"></div>
+        <div id="btn2" class="btn"></div>
+        <div id="btn3" class="btn"></div>
+        <div id="btn4" class="btn"></div>
+      </div>
     </div>
   </body>
 </html>
