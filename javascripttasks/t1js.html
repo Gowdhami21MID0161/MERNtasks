@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reverse a number</title>
+  </head>
+  <body>
+    <h3>Reverse a Number</h3>
+    <input type="number" id="inputnum" placeholder="Enter number" />
+    <button onclick="reverse()">Reverse</button>
+    <p id="input"></p>
+    <p id="result"></p>
+    <script>
+      function reversenum(num) {
+        let numstr = num.toString();
+        //split str into array,reverse & joins it back
+        let reversedstr = numstr.split("").reverse().join("");
+        let reversednum = parseInt(reversedstr);
+        return reversednum;
+      }
+      function reverse() {
+        let inputnumber = document.getElementById("inputnum").value;
+        let reversednumber = reversenum(inputnumber);
+        document.getElementById("input").textContent = "Number: " + inputnumber;
+        document.getElementById("result").textContent =
+          "Reversed number: " + reversednumber;
+      }
+    </script>
+  </body>
+</html>

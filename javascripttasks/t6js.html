@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Instagram</title>
+    <style>
+      body {
+        background-color: whitesmoke;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10%;
+      }
+
+      .container {
+        background-color: white;
+        text-align: center;
+        padding: 40px;
+        width: 280px;
+        box-shadow: 0 2px 5px grey;
+      }
+
+      .logo {
+        color: black;
+        font-size: 35px;
+        margin-bottom: 30px;
+      }
+      .input-field {
+        display: flex;
+        margin-bottom: 15px;
+        width: 100%;
+        align-items: center;
+      }
+
+      .input-field input {
+        border: 1px solid gainsboro;
+        border-radius: 3px;
+        padding: 10px;
+        font-size: 16px;
+        width: 100%;
+      }
+      .btn {
+        color: white;
+        background-color: blue;
+        padding: 10px;
+        width: 100%;
+        font-size: 18px;
+        border: none;
+        border-radius: 3px;
+      }
+      .remember-me {
+        display: flex;
+        margin-top: 15px;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .remember-me input {
+        margin-right: 5px;
+      }
+      .forgot-password {
+        color: blue;
+        margin-left: 10px;
+        text-decoration: none;
+      }
+      .signup-link {
+        color: blue;
+        text-decoration: none;
+        margin-top: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <p class="logo"><em>Instagram</em></p>
+      <form id="loginForm" onsubmit="return Login()">
+        <div class="input-field">
+          <input type="text" id="username" placeholder="Username" required />
+        </div>
+        <div class="input-field">
+          <input
+            type="password"
+            id="password"
+            placeholder="Password"
+            required
+          />
+        </div>
+        <button type="submit" class="btn">Log in</button>
+        <div class="remember-me">
+          <label><input type="checkbox" /> Remember me</label>
+          <a href="#" class="forgot-password">Forgot Password?</a>
+        </div>
+      </form>
+    </div>
+    <p>
+      Don't have an account!
+      <a href="#" class="signup-link">Sign up here.</a>
+    </p>
+    <script>
+      const form = document.getElementById("loginForm");
+      const usernameInput = document.getElementById("username");
+      const passwordInput = document.getElementById("password");
+
+      function Login() {
+        const username = usernameInput.value;
+        const password = passwordInput.value;
+
+        if (username === "Username" && password === "Password") {
+          alert("Login successful!");
+        } else {
+          alert("Invalid username or password");
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Date and Time</title>
+  </head>
+  <body>
+    <button onclick="showdate()">show date</button>
+    <p id="date"></p>
+    <button onclick="showtime()">show time</button>
+    <p id="time"></p>
+    <script>
+      function showdate() {
+        const date = new Date();
+        const day = date.getDate();
+        const month = date.toLocaleString("default", { month: "long" });
+        const year = date.getFullYear();
+        document.getElementById("date").textContent = `${day}/${month}/${year}`;
+      }
+      function showtime() {
+        const date = new Date();
+        document.getElementById("time").textContent = date.toString();
+      }
+    </script>
+  </body>
+</html>
